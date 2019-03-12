@@ -1,0 +1,184 @@
+:root {
+    --purple-color: #8f55a2;
+    --purple-color-light: #c183d4;
+    --deep-blue-color: #1b1c54;
+    --ligth-blue-color: #06badf;
+    --green-color: #c1da38;
+}
+
+/*Common*/
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 3rem;
+    color: white;
+}
+
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--deep-blue-color);
+}
+
+.bg-purple {
+    background-color: var(--purple-color);
+}
+
+.bg-green {
+    background-color: var(--green-color);
+}
+
+.top-line {
+    margin: 0px;
+    padding: 0px;
+    height: 1rem;
+}
+
+.top-white-line {
+    margin: 0px;
+    padding: 0px;
+    height: 2rem;
+}
+
+/*Navbar*/
+
+.navbar-dark .navbar-nav .active>.nav-link, .navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .show>.nav-link {
+    color: var(--purple-color);
+    background-color: white;
+    border-radius: 5%;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, .5);
+    padding: 0.25rem;
+    margin: 0.4rem;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: var(--purple-color);
+    background-color: white;
+    border-radius: 5%;
+}
+
+/*Contenido*/
+
+#content {
+    margin-top: 98px;
+}
+
+.banner-fiestas {
+    min-height: 90vh;
+    display: flex;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+    background-image: url('../res/foto1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.banner-fiestas-container {
+    background-color: var(--ligth-blue-color);
+    /*background-color: white;*/
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-outline-light {
+    color: white;
+    font-weight: bold;
+    background-color: var(--ligth-blue-color);
+    border-color: white;
+    border-width: 3px;
+    display: block;
+    margin: auto;
+}
+
+.btn-outline-light:hover {
+    background-color: white;
+    color: var(--ligth-blue-color);
+}
+
+.btn-outline-light:active {
+    background-color: white !important;
+    color: var(--ligth-blue-color) !important;
+    box-shadow: 0 0 0 1px transparent;
+}
+
+.btn-outline-light:focus {
+    box-shadow: 0 0 0 1px transparent;
+}
+
+.btn-outline-dark {
+    color: var(--purple-color);
+    font-weight: bold;
+    background-color: white;
+    border-color: var(--purple-color);
+    border-width: 3px;
+    display: block;
+    margin: auto;
+}
+
+.btn-outline-dark:hover {
+    background-color: var(--purple-color);
+    color: white;
+    border-color: var(--purple-color);
+}
+
+.btn-outline-dark:active {
+    background-color: var(--purple-color) !important;
+    color: rgb(141, 135, 135) !important;
+    box-shadow: 0 0 0 1px transparent!important;
+    border-color: var(--purple-color)!important;
+    box-shadow: none;
+    outline: 3px solid var(--purple-color-light) !important;
+}
+
+.btn-outline-dark:focus {
+    box-shadow: 0 0 3px 5px var(--purple-color-light) !important;
+}
+
+.fiestas-header {
+    font-family: 'Grand Hotel', cursive;
+    font-size: 5rem;
+    color: white;
+}
+
+img {
+    width: 100%;
+    max-height: 60vh;
+}
+
+.site-font {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.quienes-somos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+span.site-font {
+    font-size: 1rem;
+}
+
+@media (min-width: 600px) {
+    .top-line {
+        height: 0.5rem;
+    }
+    .fiestas-header {
+        font-size: 5rem;
+    }
+    .banner-fiestas {
+        font-size: 6rem;
+    }
+}

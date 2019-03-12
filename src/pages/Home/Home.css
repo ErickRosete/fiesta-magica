@@ -1,0 +1,129 @@
+/* #content {
+    margin-top: 98px;
+} */
+
+.banner-fiestas {
+    min-height: 90vh;
+    display: flex;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+    background-image: url('../../Assets/Images/Home/foto1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.banner-fiestas-container {
+    background-color: var(--ligth-blue-color);
+    /*background-color: white;*/
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-outline-light {
+    color: white;
+    font-weight: bold;
+    background-color: var(--ligth-blue-color);
+    border-color: white;
+    border-width: 3px;
+    display: block;
+    margin: auto;
+}
+
+.btn-outline-light:hover {
+    background-color: white;
+    color: var(--ligth-blue-color);
+}
+
+.btn-outline-light:active {
+    background-color: white !important;
+    color: var(--ligth-blue-color) !important;
+    box-shadow: 0 0 0 1px transparent;
+}
+
+.btn-outline-light:focus {
+    box-shadow: 0 0 0 1px transparent;
+}
+
+.btn-outline-dark {
+    color: var(--purple-color);
+    font-weight: bold;
+    background-color: white;
+    border-color: var(--purple-color);
+    border-width: 3px;
+    display: block;
+    margin: auto;
+}
+
+.btn-outline-dark:hover {
+    background-color: var(--purple-color);
+    color: white;
+    border-color: var(--purple-color);
+}
+
+.btn-outline-dark:active {
+    background-color: var(--purple-color) !important;
+    color: rgb(141, 135, 135) !important;
+    box-shadow: 0 0 0 1px transparent!important;
+    border-color: var(--purple-color)!important;
+    box-shadow: none;
+    outline: 3px solid var(--purple-color-light) !important;
+}
+
+.btn-outline-dark:focus {
+    box-shadow: 0 0 3px 5px var(--purple-color-light) !important;
+}
+
+.fiestas-header {
+    font-family: 'Grand Hotel', cursive;
+    font-size: 5rem;
+    color: white;
+}
+
+.site-font {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.quienes-somos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.populares-container {
+    background-color: #f7f1f5;
+}
+
+.populares-container h2 {
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.populares-container h3{
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.populares-img {
+    border-radius: 100%;
+    width: 50%;
+    height: 50%;
+}
+
+span.site-font {
+    font-size: 1rem;
+}
+
+@media (min-width: 600px) {
+    .top-line {
+        height: 0.5rem;
+    }
+    .fiestas-header {
+        font-size: 5rem;
+    }
+    .banner-fiestas {
+        font-size: 6rem;
+    }
+}
