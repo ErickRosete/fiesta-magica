@@ -10,7 +10,7 @@ import {
   faMapMarkerAlt,
   faSearch
 } from "@fortawesome/free-solid-svg-icons";
-import { faFacebook, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook, faTwitter, faYoutube, faLinkedin,faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 import { ApolloProvider } from "react-apollo";
 import ApolloClient from "apollo-boost";
@@ -28,6 +28,9 @@ class App extends Component {
     // console.log(process.env.REACT_APP_SERVER_URL);
     library.add([
       faFacebook,
+      faTwitter,
+      faYoutube,
+      faInstagram,
       faLinkedin,
       faSearch,
       faHome,

@@ -16,20 +16,23 @@
 
 .banner-fiestas-container {
     background-color: var(--ligth-blue-color);
-    /*background-color: white;*/
     border-radius: 5%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+}
+
+.btn-block {
+    display: block;
+    margin: auto;
 }
 
 .btn-outline-light {
     color: white;
+    background-color: transparent;
     font-weight: bold;
-    background-color: var(--ligth-blue-color);
     border-color: white;
     border-width: 3px;
-    display: block;
-    margin: auto;
 }
 
 .btn-outline-light:hover {
@@ -47,14 +50,14 @@
     box-shadow: 0 0 0 1px transparent;
 }
 
+/*purple*/
+
 .btn-outline-dark {
     color: var(--purple-color);
-    font-weight: bold;
     background-color: white;
     border-color: var(--purple-color);
     border-width: 3px;
-    display: block;
-    margin: auto;
+    font-weight: bold;
 }
 
 .btn-outline-dark:hover {
@@ -64,17 +67,17 @@
 }
 
 .btn-outline-dark:active {
-    background-color: var(--purple-color) !important;
-    color: rgb(141, 135, 135) !important;
-    box-shadow: 0 0 0 1px transparent!important;
     border-color: var(--purple-color)!important;
-    box-shadow: none;
-    outline: 3px solid var(--purple-color-light) !important;
+    background-color: var(--purple-color) !important;
+    color: white!important;
+    box-shadow: 0 0 0px 3px var(--purple-color-light) !important;
 }
 
 .btn-outline-dark:focus {
-    box-shadow: 0 0 3px 5px var(--purple-color-light) !important;
+    box-shadow: 0 0 0 1px transparent;
 }
+
+/**/
 
 .fiestas-header {
     font-family: 'Grand Hotel', cursive;
@@ -101,16 +104,59 @@
     text-align: center;
 }
 
-.populares-container h3{
+.populares-container h3 {
     margin: 1rem auto;
+    font-size: 1.8rem;
     text-align: center;
 }
 
-.populares-img {
-    border-radius: 100%;
-    width: 50%;
-    height: 50%;
+.populares-container img {
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
+
+/****** Personaliza tu fiesta ******/
+
+.personal-banner {
+    width:100%;
+    min-height: 50vh;
+    display:flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../../Assets/Images/Home/foto3.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.personal-banner h1 {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.personal-banner h2 {
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+/*interes*/
+
+.text-center {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+/*otros*/
 
 span.site-font {
     font-size: 1rem;

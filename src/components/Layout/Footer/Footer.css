@@ -1,17 +1,30 @@
 footer {
-    background-color: black;
+    background-color: var(--deep-blue-color);
+    color:white;
     display: flex;
     align-content: center;
     justify-content: space-between;
     padding: 2vh 4vw;
     flex-shrink: 0;
+    padding-bottom: 3rem;
+    font-size:1rem;
 }
 
-footer span, footer a {
-    color: white;
-    font-size: large;
+footer .logo-astra{
+    width: 40%;
+    height: auto;
+    padding-left: 1rem;
 }
+
+footer a:hover {
+    color: var(--blue-color);
+}
+
 
 footer .social-networks svg {
     margin-left: .75rem;
+}
+
+footer .social-networks svg:hover{
+    color: var(--blue-color);
 }

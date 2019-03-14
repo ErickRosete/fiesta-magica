@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Col, Container, Row } from "react-bootstrap"
+import { Col, Container, Row, Button } from "react-bootstrap"
 
 import { Helmet } from "react-helmet";
 
@@ -11,6 +11,7 @@ import foto2 from "../../Assets/Images/Home/foto2.png"
 import populares1 from "../../Assets/Images/Home/populares1.png"
 import populares2 from "../../Assets/Images/Home/populares2.png"
 import populares3 from "../../Assets/Images/Home/populares3.png"
+import globos from "../../Assets/Images/Home/globos.png"
 
 export class HomePage extends Component {
   render() {
@@ -30,7 +31,7 @@ export class HomePage extends Component {
               <Col sm={5} className="banner-fiestas-container py-5">
                 <h1 className='mb-3'>Todo para tus <div className='fiestas-header'> fiestas </div>
                 </h1>
-                <button className='btn btn-outline-light mt-3'> Ver catálogo </button>
+                <Button variant="outline-light" className="mt-3"> Ver catálogo </Button>
               </Col>
             </Row>
 
@@ -46,7 +47,7 @@ export class HomePage extends Component {
                   aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
                   cillum
                 </span>
-                <button className='btn btn-outline-dark mt-3'> Conoce más </button>
+                <Button variant="outline-dark" className="mt-3 btn-block"> Conoce más </Button>
               </Col>
             </Row>
 
@@ -70,7 +71,28 @@ export class HomePage extends Component {
               </Col>
             </Row>
 
+            <Row>
+              <div className="personal-banner">
+                <h1>¡Personaliza tu fiesta! </h1>
+                <h2>Agrega ese toque especial</h2>
+                <Button variant="outline-light" className="mt-3"> Ver catálogo </Button>
+              </div>
+            </Row>
+
+            <Row className="pt-3">
+              <Col xs={12} md={4}><img className="img-fluid" src={globos} alt="globos"></img></Col>
+              <Col xs={12} md={4}>
+                <div className="text-center">
+                  <h2>¿Te interesa?</h2>
+                  <Button variant="outline-dark" className="mt-3"> Contáctanos </Button>
+                </div>
+              </Col>
+              <Col xs={12} md={4}><img className="img-fluid" src={globos} alt="blogos"></img></Col>
+            </Row>
           </Container>
+          <footer>
+
+          </footer>
         </div>
       </Layout>);
 
