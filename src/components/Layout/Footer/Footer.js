@@ -26,7 +26,6 @@ const Footer = () => {
             <a target="_blank" rel="noopener noreferrer" href="#">
               Aviso de privacidad y cookies
             </a>
-
           </Col>
           <Col className="center-items social-networks">
             <a target="_blank" rel="noopener noreferrer" href="">
