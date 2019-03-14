@@ -10,7 +10,7 @@ const Footer = () => {
     <footer>
       <Container fluid>
         <Row>
-          <Col>
+          <Col className="center-items">
             ©2019 Fiesta mágica
             <br /> <br />
             Desarrollado por
@@ -18,18 +18,17 @@ const Footer = () => {
               <img src={logoAstra} href="#" className="logo-astra" alt="astradev"></img>
             </a>
           </Col>
-
-          <Col>
-            Tel. (686) 123-45-67 <br/>
+          <Col className="center-items">
+            Tel. (686) 123-45-67 <br />
             <a target="_blank" rel="noopener noreferrer" href="mailto:fiestamagica@gmail.com">
               fiestamagica@gmail.com
-            </a><br/><br/>
+            </a><br /><br />
             <a target="_blank" rel="noopener noreferrer" href="#">
               Aviso de privacidad y cookies
             </a>
-          </Col>
 
-          <Col className="social-networks">
+          </Col>
+          <Col className="center-items social-networks">
             <a target="_blank" rel="noopener noreferrer" href="">
               <FontAwesomeIcon icon={["fab", "twitter"]} size="2x" />
             </a>
