@@ -22,9 +22,9 @@
     align-items: center;
 }
 
-.btn-block {
-    display: block;
-    margin: auto;
+.btn-custom-block{
+    display:block;
+    margin:auto;
 }
 
 .btn-outline-light {
@@ -158,7 +158,7 @@
 
 /*otros*/
 
-span.site-font {
+span{
     font-size: 1rem;
 }
 

@@ -20,31 +20,23 @@ footer {
 }
 
 footer .logo-astra{
-    width: 40%;
+    width: 6rem;
     height: auto;
     padding-left: 1rem;
 }
 
-footer .center-items a{
+footer a{
     color: white;
-}
-
-footer .center-items a:hover {
-    color: var(--blue-color);
 }
 
 .social-networks{
     flex-direction: row;
 }
 
-footer .social-networks a:hover{
-    color: var(--blue-color);
+footer a:hover{
+    color: var(--ligth-blue-color);
 }
 
 footer .social-networks svg {
     margin-left: .75rem;
-}
-
-footer svg:hover{
-    color: var(--blue-color);
 }

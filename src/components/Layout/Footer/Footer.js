@@ -13,10 +13,12 @@ const Footer = () => {
           <Col className="center-items">
             ©2019 Fiesta mágica
             <br /> <br />
-            Desarrollado por
-            <a target="_blank" rel="noopener noreferrer" href="http://astradev.com">
-              <img src={logoAstra} href="#" className="logo-astra" alt="astradev"></img>
-            </a>
+            <p>
+              <span className="flex-grow">Desarrollado por</span>
+              <a target="_blank" rel="noopener noreferrer" href="http://astradev.com">
+                <img src={logoAstra} href="#" className="logo-astra" alt="astradev"></img>
+              </a>
+            </p>
           </Col>
           <Col className="center-items">
             Tel. (686) 123-45-67 <br />
