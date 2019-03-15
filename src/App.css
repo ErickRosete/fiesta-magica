@@ -30,6 +30,10 @@ h3 {
   color: var(--purple-color);
 }
 
+span {
+  font-family: 'Open Sans', sans-serif;
+}
+
 .bg-purple {
   background-color: var(--purple-color);
 }

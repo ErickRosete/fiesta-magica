@@ -42,12 +42,12 @@ export class HomePage extends Component {
               <Col xs={12} md={6} className="pl-3 pr-3 py-4">
                 <div className="quienes-somos">
                   <h2 className="mb-3"> ¿Quienes Somos?</h2>
-                  <span className="site-font">
+                  <span>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
                     et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
                     aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
                     cillum
-                </span>
+                  </span>
                   <Button variant="outline-dark" className="mt-3 btn-custom-block"> Conoce más </Button>
                 </div>
               </Col>

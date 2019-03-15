@@ -8,7 +8,7 @@ import logoAstra from "../../../Assets/Images/Logos/logo-astra.png"
 const Footer = () => {
   return (
     <footer>
-      <Container fluid>
+      <Container fluid className="pt-3">
         <Row>
           <Col className="center-items">
             ©2019 Fiesta mágica
