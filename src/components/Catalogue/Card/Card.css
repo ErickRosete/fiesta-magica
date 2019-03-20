@@ -1,0 +1,22 @@
+.descripcion{
+    /* font-size:30px; */
+    font-size:2vw;
+    text-align: center;
+    background-color:#f08ea7;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    color:white;
+}
+.tarjeta{
+    padding:1rem;
+}
+.imageContainer{
+    background-color:#de365a;
+}
+.imageClass{
+    width:100%;
+    height:auto;
+    max-height:30vh;
+    cursor:pointer;
+
+}

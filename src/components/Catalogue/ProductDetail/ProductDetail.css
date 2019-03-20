@@ -1,0 +1,21 @@
+.title{
+    /* font-size:100px; */
+    font-size:3vw;
+    color:#1a1b54;
+    font-weight:bold
+}
+.content{
+    color:#1d1d53;
+    font-size:2vw;
+}
+
+.imageClass2{
+    width:100%;
+    height:auto;
+    max-height:30vh;
+    cursor:pointer;
+    position: relative;
+    top: 50%;
+    /* left: 50%; */
+    transform: translate(0,-50%) 
+}

@@ -19,7 +19,7 @@ import "./App.css";
 
 import HomePage from "./pages/Home/Home"
 import AboutPage from "./pages/About/About";
-
+import CataloguePage from "./pages/Catalogue/Catalogue";
 const client = new ApolloClient({
   uri: `${process.env.REACT_APP_SERVER_URL}/graphql`
 });
@@ -44,8 +44,9 @@ class App extends Component {
         <ScrollToTop>
           <ApolloProvider client={client}>
             <Switch>
+            <Route path="/inicio" component={HomePage} />
               <Route path="/nosotros" component={AboutPage} />
-              <Route path="/inicio" component={HomePage} />
+              <Route path="/catalogo" component={CataloguePage} />
               <Redirect to="/inicio" />
             </Switch>
           </ApolloProvider>
