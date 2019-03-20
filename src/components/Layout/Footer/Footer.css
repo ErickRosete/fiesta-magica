@@ -1,14 +1,36 @@
 footer {
-    background-color: var(--deep-blue-color);
+    background-color: var(--purple-color);
     color: white;
     display: flex;
     align-content: center;
     justify-content: space-between;
-    padding: 2vh 4vw;
     flex-shrink: 0;
-    padding-bottom: 3rem;
-    padding-top: 0;
     font-size: 1rem;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 0.25rem;
+}
+
+.bg-blue {
+    background-color: var(--deep-blue-color);
+}
+
+.footer-top {
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    font-size: 1rem;
+}
+
+.footer-bottom {
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    font-size: 0.8rem;
 }
 
 .center-items {
@@ -20,9 +42,9 @@ footer {
 }
 
 footer .logo-astra {
-    width: 6rem;
+    width: 5rem;
     height: auto;
-    padding-left: 1rem;
+    padding-left: 0.5rem;
 }
 
 footer a {
@@ -40,4 +62,10 @@ footer a:hover {
 
 footer .social-networks svg {
     margin-left: .75rem;
+}
+
+@media (min-width: 600px) {
+    .footer-top {
+        padding-bottom: 1rem;
+    }
 }

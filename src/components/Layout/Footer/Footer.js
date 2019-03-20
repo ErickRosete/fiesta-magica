@@ -8,40 +8,23 @@ import logoAstra from "../../../Assets/Images/Logos/logo-astra.png"
 const Footer = () => {
   return (
     <footer>
-      <Container fluid className="pt-3">
-        <Row>
-          <Col className="center-items">
-            ©2019 Fiesta mágica
-            <br /> <br />
-            <p>
-              <span className="flex-grow">Desarrollado por</span>
-              <a target="_blank" rel="noopener noreferrer" href="http://astradev.com">
-                <img src={logoAstra} href="#" className="logo-astra" alt="astradev"></img>
-              </a>
-            </p>
+      <Container fluid>
+        <Row className="bg-blue footer-top">
+          <Col xs={12} md={6}>
+            <p>@2019 Fiesta Mágica</p>
+            <a href="mailto:fiestamagica@gmail.com"> fiestamagica@gmail.com</a>
           </Col>
-          <Col className="center-items">
-            Tel. (686) 123-45-67 <br />
-            <a target="_blank" rel="noopener noreferrer" href="mailto:fiestamagica@gmail.com">
-              fiestamagica@gmail.com
-            </a><br /><br />
-            <a target="_blank" rel="noopener noreferrer" href="#">
-              Aviso de privacidad y cookies
-            </a>
+          <Col xs={12} md={6}>
+            <p>Coyoacán, CDMX</p>
+            <p>Tel. 5617-9619 | 55-6611-2854</p>
           </Col>
-          <Col className="center-items social-networks">
-            <a target="_blank" rel="noopener noreferrer" href="">
-              <FontAwesomeIcon icon={["fab", "twitter"]} size="2x" />
-            </a>
-            <a target="_blank" rel="noopener noreferrer" href="">
-              <FontAwesomeIcon icon={["fab", "facebook"]} size="2x" />
-            </a>
-            <a target="_blank" rel="noopener noreferrer" href="">
-              <FontAwesomeIcon icon={["fab", "instagram"]} size="2x" />
-            </a>
-            <a target="_blank" rel="noopener noreferrer" href="">
-              <FontAwesomeIcon icon={["fab", "youtube"]} size="2x" />
-            </a>
+        </Row>
+        <Row className="bg-purple footer-bottom">
+          <Col xs={12} md={6}>
+            Aviso de privacidad| Términos de uso
+          </Col>
+          <Col xs={12} md={6}>
+            Desarrollado por <img src={logoAstra} className="logo-astra"></img>
           </Col>
         </Row>
       </Container>

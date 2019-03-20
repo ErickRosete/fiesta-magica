@@ -82,19 +82,19 @@ export class HomePage extends Component {
             </Row>
 
             <Row className="pt-3">
-              <Col xs={12} md={4}><img className="img-fluid" src={globos} alt="globos"></img></Col>
-              <Col xs={12} md={4}>
-                <div className="text-center">
+              <Col xs={3} md={4} className="interesa_globos">
+                <img className="img-fluid" src={globos} alt="globos"></img></Col>
+              <Col xs={6} md={4} className="px-0">
+                <div className="interesa_container">
                   <h2>¿Te interesa?</h2>
-                  <Button variant="outline-dark" className="mt-3"> Contáctanos </Button>
+                  <Button variant="outline-dark"> Solicitar presupuesto </Button>
                 </div>
               </Col>
-              <Col xs={12} md={4}><img className="img-fluid" src={globos} alt="blogos"></img></Col>
+              <Col xs={3} md={4} className="interesa_globos">
+                <img className="img-fluid" src={globos} alt="blogos"></img>
+              </Col>
             </Row>
           </Container>
-          <footer>
-
-          </footer>
         </div>
       </Layout>);
 
