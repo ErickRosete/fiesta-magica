@@ -15,16 +15,21 @@
     background-color: var(--purple-color);
 }
 
+.nav-link{
+    font-size: 1.25rem;
+}
+
 .main-navigation .logo {
     position: absolute;
-    margin-top: 1.5rem;
-    margin-left: 2rem;
-    max-width: 6rem;
+    top: 1.2rem;
+    left: 3rem;
+    max-width: 5rem;
     height: auto;
 }
 
 .top-line {
-    margin: 0px;
+    margin-top:0;
+    margin-bottom: 2.5rem;
     padding: 0px;
     height: 1rem;
 }
@@ -40,9 +45,13 @@
 }
 
 @media (min-width: 600px) {
-    /* .main-navigation .logo {
-        max-width: 15rem;
+    .main-navigation .logo {
+        max-width: 7rem;
     }
+    .top-line{
+        margin-bottom: 4rem;
+    }
+    /*
     .navbar {
         padding: 0.5rem 4rem;
     } */

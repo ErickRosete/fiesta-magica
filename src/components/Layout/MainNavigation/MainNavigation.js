@@ -38,7 +38,6 @@ const mainNavigation = props => {
         </Navbar.Collapse>
       </Navbar>
       <hr className="top-line bg-green" />
-      <hr className="top-white-line height-2 bg-white" />
     </header>
   );
 };
