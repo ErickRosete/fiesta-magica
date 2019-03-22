@@ -15,7 +15,7 @@ import "./About.css"
 
 // import PropTypes from 'prop-types'
 // import { withStyles } from "@material-ui/core/styles";
-const AnyReactComponent = ({ text }) => <div style={{backgroundColor:"green",width: 62, height: 60}}>{text}</div>;
+const AnyReactComponent = ({ text }) => <div style={{backgroundColor:"#191c51",width: 62, height: 60,color:"white",display: 'flex', justifyContent: 'center', alignItems: 'center',}}>{text}</div>;
 
 const key = "AIzaSyC0OyV5AleQHaNYkrwPC8q2DegYgSagb5E";
 const placesScript = `https://maps.googleapis.com/maps/api/js?key=${key}&libraries=places&callback=initMap`
@@ -90,7 +90,7 @@ export class AboutPage extends Component {
                                     <AnyReactComponent
                                         lat={this.state.center.lat}
                                         lng={this.state.center.lng}
-                                        text="My Marker"
+                                        text="Ubicación"
                                     />
                                     </GoogleMapReact>
                                 </div>
