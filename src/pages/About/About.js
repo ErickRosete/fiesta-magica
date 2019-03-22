@@ -31,36 +31,42 @@ export class About extends Component {
                     </Container>
                     <Container fluid className="py-4 bg-purple">
                         <Row>
-                            <Col xs={12} md={6} className="vision">
-                                <h1>Misión</h1>
-                                <span className="">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                    cillum
-                                </span>
+                            <Col xs={12} md={6} >
+                                <div className="vision">
+                                    <h1>Misión</h1>
+                                    <span>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                        cillum
+                                    </span>
+                                </div>
                             </Col>
-                            <Col xs={12} md={6} className="vl vision">
-                                <h1 className="">Visión</h1>
-                                <span className="">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                    cillum
-                                </span>
+                            <Col xs={12} md={6} className="vl">
+                                <div className="vision">
+                                    <h1 className="">Visión</h1>
+                                    <span>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                        cillum
+                                    </span>
+                                </div>
                             </Col>
                         </Row>
                     </Container>
-                    <Container fluid className="flex-center py-4">
-                        <h2> Valores </h2>
-                        <div className="valores">
-                            <span> Responsabilidad </span>
-                            <span> Confianza </span>
-                            <span> Integridad </span>
-                            <span> Amabilidad </span>
-                            <span> Respeto </span>
+                    <Container fluid>
+                        <div className="flex-center valores">
+                            <h2> Valores </h2>
+                            <div className="valores-list">
+                                <span> Responsabilidad </span>
+                                <span> Confianza </span>
+                                <span> Integridad </span>
+                                <span> Amabilidad </span>
+                                <span> Respeto </span>
+                            </div>
                         </div>
-                    </Container>    
+                    </Container>
                 </div>
             </Layout>
         )

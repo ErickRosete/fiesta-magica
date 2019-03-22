@@ -1,4 +1,4 @@
-.flex-center{
+.flex-center {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,47 +6,57 @@
     justify-content: center;
 }
 
-.nosotros{
+.nosotros {
     width: 100%;
-    padding:2rem;
+    padding: 2rem;
 }
 
-.nosotros h2{
+.nosotros span {
+    font-size: 1.25rem;
+}
+
+.nosotros h2 {
     font-size: 3rem;
 }
 
-.vision{
-    padding-top:1rem;
+.vision {
+    padding: 2rem;
 }
 
-.vision h1{
+.vision h1 {
     font-family: 'Grand Hotel', cursive;
     font-size: 5rem;
     color: white;
 }
 
-.vision span{
-    color:white;
+.vision span {
+    font-size: 1.25rem;
+    color: white;
 }
 
-.vl{
+.vl {
     border-left: none;
 }
 
-.valores{
-    padding-top:1rem;
+.valores {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+}
+
+.valores-list {
+    padding-top: 1rem;
     padding-bottom: 1rem;
     width: 100%;
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     align-content: center;
     justify-content: space-evenly;
 }
 
-.valores span{
+.valores-list span {
     font-size: 1.25rem;
-    padding-top:1rem;
+    padding-top: 1rem;
     padding-bottom: 1rem;
 }
 
@@ -55,20 +65,20 @@ span.site-font {
 }
 
 @media (min-width: 600px) {
-    .vl{
+    .vl {
         border-left: thick solid var(--ligth-blue-color);
+        padding-right: 1rem;
     }
-    .valores{
+    .valores-list {
         flex-direction: row;
     }
-    .valores{
-        padding-top:2rem;
+    .valores-list {
         padding-bottom: 2rem;
     }
     .top-line {
         height: 0.5rem;
     }
-    .nosotros{
-       width: 60%;
+    .nosotros {
+        width: 60%;
     }
 }
