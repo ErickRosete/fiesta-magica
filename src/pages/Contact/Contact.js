@@ -8,7 +8,7 @@ import Layout from "../../components/Layout/Layout";
 // npm i google-map-react -s
 import GoogleMapReact from 'google-map-react';
 
-import "./About.css"
+import "./Contact.css"
 
 // import Form from 'react-bootstrap/Form';
 // import Form from 'react-bootstrap/Form'
