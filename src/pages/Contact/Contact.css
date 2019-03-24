@@ -1,0 +1,37 @@
+.papa{
+    display:flex;
+    justify-content: center;
+}
+.hijo{
+    font-family: 'Open Sans', sans-serif;
+    font-size:60px;
+    font-weight: bold;
+    color:#191c51
+}
+.btn-especial{
+    font-size:2rem;
+    padding:.5rem 2rem;
+    border:  5px solid #8e55a2;
+    color:#8e55a2;
+    font-weight:bold
+}
+.btn-especial:hover{
+    background-color: #8e55a2;
+    font-size:2rem;
+    padding:.5rem 2rem;
+    border:  5px solid #8e55a2;
+    color:white;
+    font-weight:bold
+}
+
+.bordes{
+    border:  2px solid #1a1d50;
+}
+.direccion{
+    width:100%;
+    font-family: 'Open Sans', sans-serif;
+    font-size:30px;
+    font-weight: bold;
+    color:#191c51;
+    text-align:right
+}

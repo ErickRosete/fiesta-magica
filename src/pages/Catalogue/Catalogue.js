@@ -127,9 +127,14 @@ export class CataloguePage extends Component {
         // console.log(event)
         console.log("youclickedme")
         console.log(this.state.products[index])
+        const serverPath="https://fiesta-magica-consola.herokuapp.com/"
+        const imagePath=this.state.products[index].imageLinks[0].split("http://localhost:5000/")[1];
+        const path=serverPath+imagePath;
+        console.log("clicked image path")
+        console.log(path)
         const json3={
             selectedDescription:this.state.products[index].shortDescription,
-            selectedImage:this.state.products[index].imageLinks[0],
+            selectedImage:path,
             selectedName:this.state.products[index].name
         }
         this.setState({modal:true,...json3})
@@ -176,9 +181,14 @@ export class CataloguePage extends Component {
                
                 <Row className="renglon">
                     {this.state.products[0]!=="" && this.state.products.map((element,index)=>{
+                        const serverPath="https://fiesta-magica-consola.herokuapp.com/"
+                        const imagePath=element.imageLinks[0].split("http://localhost:5000/")[1];
+                        const path=serverPath+imagePath;
+                        // console.log(path)
+                        console.log(path)
                         return(
                             <Card 
-                                img={element.imageLinks[0]} 
+                                img={path} 
                                 description={element.name} 
                                 clickHandler={this.clickHandler}
                                 key={element._id}
