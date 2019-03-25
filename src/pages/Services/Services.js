@@ -6,7 +6,7 @@ import { Helmet } from "react-helmet";
 import Layout from "../../components/Layout/Layout";
 
 import "./Services.css";
-
+import ServiceItem from '../../components/Services/ServiceItem'
 import placeholder from "../../Assets/Images/Home/foto2.png"
 
 export class ServicesPage extends Component {
@@ -24,17 +24,19 @@ export class ServicesPage extends Component {
                 <div className="services_list">
                     <h2>Servicios </h2>
                     <Container>
-                        <Row>
-                            <Col className="bg-pink txt-white p-0" sm={4} xs={12}>
-                                <img src={placeholder} alt="FOTO" className="img-fluid" ></img>
-                            </Col>
-                            <Col className="bg-light-pink txt-white" sm={8} xs={12}>
-                                <div className="services_list-content">
-                                    <h1>Nombre</h1>
-                                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nis</p>
-                                </div>
-                            </Col>
-                        </Row>
+
+                        <ServiceItem
+                            img={placeholder}
+                            title="este es un titulo"
+                            desc="esta es una descripcion"
+                        />
+
+                        <ServiceItem
+                            img={placeholder}
+                            title="este es un titulo x2"
+                            desc="esta es una descripcion mas.."
+                        />
+
                     </Container>
                 </div>
 
