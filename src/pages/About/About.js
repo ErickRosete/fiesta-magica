@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
-import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row'
 //import Col from 'react-bootstrap/Col'
-import Button from 'react-bootstrap/Button';
 import Layout from "../../components/Layout/Layout";
 
 import {  Container,Col} from "react-bootstrap"
@@ -29,7 +27,7 @@ export class AboutPage extends Component {
                 </Helmet>
                 <div className="about">
                     <Container fluid className="px-0">
-                        <img src={aboutBanner} className="img-fluid" ></img>
+                        <img src={aboutBanner} className="img-fluid" alt="about"></img>
                     </Container>
                     <Container fluid className="nosotros flex-center">
                         <h2> Nosotros </h2>
