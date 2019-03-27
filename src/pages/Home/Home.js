@@ -83,7 +83,7 @@ export class HomePage extends Component {
 
             <Row className="pt-3">
               <Col xs={3} md={4} className="interesa_globos">
-                <img className="img-fluid fixed" src={globos} alt="globos"></img></Col>
+                <img className="img-fluid" src={globos} alt="globos"></img></Col>
               <Col xs={6} md={4} className="px-0">
                 <div className="interesa_container">
                   <h2>¿Te interesa?</h2>
