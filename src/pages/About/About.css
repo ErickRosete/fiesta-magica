@@ -1,3 +1,88 @@
+.flex-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.nosotros {
+    width: 100%;
+    padding: 2rem;
+}
+
+.nosotros span {
+    font-size: 1.25rem;
+}
+
+.nosotros h2 {
+    font-size: 3rem;
+}
+
+.vision {
+    padding: 2rem;
+}
+
+.vision h1 {
+    font-family: 'Grand Hotel', cursive;
+    font-size: 5rem;
+    color: white;
+}
+
+.vision span {
+    font-size: 1.25rem;
+    color: white;
+}
+
+.vl {
+    border-left: none;
+}
+
+.valores {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+}
+
+.valores-list {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.valores-list span {
+    font-size: 1.25rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+span.site-font {
+    font-size: 1rem;
+}
+
+@media (min-width: 600px) {
+    .vl {
+        border-left: thick solid var(--ligth-blue-color);
+        padding-right: 1rem;
+    }
+    .valores-list {
+        flex-direction: row;
+    }
+    .valores-list {
+        padding-bottom: 2rem;
+    }
+    .top-line {
+        height: 0.5rem;
+    }
+    .nosotros {
+        width: 60%;
+    }
+   
+}
 .papa{
     display:flex;
     justify-content: center;
