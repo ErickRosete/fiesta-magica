@@ -119,7 +119,13 @@
 .populares-container img {
     padding-left: 2rem;
     padding-right: 2rem;
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s; /* Firefox < 16 */
+     -ms-animation: fadein 2s; /* Internet Explorer */
+      -o-animation: fadein 2s; /* Opera < 12.1 */
+         animation: fadein 2s;
 }
+
 
 /****** Personaliza tu fiesta ******/
 
@@ -132,10 +138,12 @@
     align-content: center;
     align-items: center;
     justify-content: center;
+
     background-image: url('../../Assets/Images/Home/foto3.png');
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat: no-repeat;   
+    background-attachment: fixed;
     background-position: center center;
+    background-size: cover;
 }
 
 .personal-banner h1 {
@@ -175,7 +183,6 @@
 .interesa_globos{
     padding: 0 0.5rem;
 }
-
 /*otros*/
 
 span {
