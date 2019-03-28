@@ -6,6 +6,7 @@
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     color:white;
+    opacity:0;
 }
 .tarjeta{
     padding:1rem;
@@ -20,3 +21,51 @@
     cursor:pointer;
 
 }
+
+/* .descripcionOff{
+    opacity: 0;
+} */
+
+.detail-enter {
+    opacity: 0;
+}
+
+.detail-enter-active {
+    opacity: 1;
+    transition: opacity 500ms;
+}
+
+.detail-enter-done {
+    opacity: 1;
+}
+
+.cardImage-enter {
+    /* opacity: 0; */
+    /* transform: translate3d(-100%, 0, 0); */
+    /* animation-name: myframes; */
+    /* animation-duration: 400ms; */
+    height:30vh;
+}
+.cardImage-enter-active {
+    height:20vh;
+    transition: height 500ms;
+}
+
+.cardImage-enter-done {
+    height:20vh;
+}
+/* @keyframes myframes{
+    from{
+        height:30vh
+
+    }
+    to{
+        height:20vh
+    }
+}
+   */
+
+   /* https://github.com/reactjs/react-transition-group/issues/157
+   https://www.w3schools.com/csSref/css3_pr_animation-keyframes.asp
+   https://www.youtube.com/watch?v=f1WMjDx4snI
+   http://reactcommunity.org/react-transition-group/css-transition */

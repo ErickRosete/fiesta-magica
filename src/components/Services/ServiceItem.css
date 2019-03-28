@@ -30,3 +30,9 @@
     font-size: 3.75rem;
     padding: 1rem 0px;
 }
+.serviceImage{
+    width:100%;
+    height:auto;
+    max-height:30vh;
+    cursor:pointer;
+}

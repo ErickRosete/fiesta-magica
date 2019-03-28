@@ -26,3 +26,16 @@
 .info_request .btn {
     margin-bottom: 2rem;
 }
+
+.service, .service.fade-enter {
+    opacity: 0;
+}
+
+.service.fade-enter-active {
+    opacity: 1;
+    transition: opacity 500ms;
+}
+
+.service.fade-enter-done {
+    opacity: 1;
+}

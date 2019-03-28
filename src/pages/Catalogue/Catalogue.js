@@ -13,6 +13,9 @@ import Modal from 'react-bootstrap/Modal'
 
 import ProductDetail from "../../components/Catalogue/ProductDetail/ProductDetail";
 
+//npm i react-transition-group --s 
+import CSSTransition from "react-transition-group/CSSTransition";
+const placeholder="https://via.placeholder.com/468x60?text=Visit+Blogging.com+Now"
 
 // import { Dimensions } from 'react-native';
 // const { width, height } = Dimensions.get('window');
@@ -81,6 +84,9 @@ export class CataloguePage extends Component {
     componentDidMount(){
         this.getProducts();
         this.getCategories();
+        setTimeout(() => {
+            this.setState({animate:true})
+        }, 1000);
     }
    
     closeModal = () => this.setState({ modal: false });
@@ -94,7 +100,8 @@ export class CataloguePage extends Component {
             modal: false,
             selectedImage:"nothing",
             selectedName:"nombrecito",
-            selectedDescription:"descripcioncita"
+            selectedDescription:"descripcioncita",
+            animate:false
         };
     }
    
@@ -180,6 +187,14 @@ export class CataloguePage extends Component {
                 </Row>
                
                 <Row className="renglon">
+                    <CSSTransition in={this.state.animate} timeout={500} classNames="detail"   key={1} >
+                        <Card 
+                            img={placeholder} 
+                            description={"descripcion"} 
+                            clickHandler={this.clickHandler}
+                            >
+                        </Card>
+                    </CSSTransition>
                     {this.state.products[0]!=="" && this.state.products.map((element,index)=>{
                         const serverPath="https://fiesta-magica-consola.herokuapp.com/"
                         const imagePath=element.imageLinks[0].split("http://localhost:5000/")[1];

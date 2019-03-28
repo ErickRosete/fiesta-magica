@@ -9,9 +9,9 @@ const ServiceItem = (props) => {
     const desc = props.desc ? props.desc : "";
 
     return (
-        <Row>
+        <Row className="service">
             <Col className="bg-pink txt-white p-0" sm={4} xs={12}>
-                <img src={img} alt="FOTO" className="img-fluid" ></img>
+                <img src={img} alt="FOTO" className="serviceImage" ></img>
             </Col>
             <Col className="bg-light-pink txt-white" sm={8} xs={12}>
                 <div className="services_list-content">

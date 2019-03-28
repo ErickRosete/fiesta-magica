@@ -69,3 +69,16 @@
     left: 50%;
     transform: translate(-50%, -50%) !important;
 }
+
+.detail-enter {
+    opacity: 0;
+}
+
+.detail-enter-active {
+    opacity: 1;
+    transition: opacity 500ms;
+}
+
+.detail-enter-done {
+    opacity: 1;
+}
