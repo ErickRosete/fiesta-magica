@@ -4,7 +4,6 @@ import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
 import "./Card.css"
 import classNames from 'classnames';
-import CSSTransition from "react-transition-group/CSSTransition";
 
 
 // https://via.placeholder.com/468x60?text=Visit+Blogging.com+Now 
@@ -42,39 +41,18 @@ export class Card extends Component {
         console.log(`indice: ${props.id}`)
     }
 
-    hoverHandler=()=>{
-        console.log("you hoveredme")
-        this.setState({
-            // bloque:"descripcionOff",
-            animate:true
-        })
-    }
-    hoverHandler2=()=>{
-        console.log("you hoveredme out")
-        this.setState({
-            // bloque:textClass,
-            animate:false
-        })
-    }
     render() {
         // https://medium.freecodecamp.org/deliberate-practice-what-i-learned-from-reading-classnames-f9b89cb785e4
         // https://react-bootstrap.github.io/layout/grid/
-
         return (
             <Col md="4" xs="6" className="tarjeta">
-                <div style={{position:"relative"}}>
-                        <Row noGutters className="imageContainer" onClick={this.props.clickHandler.bind(this, this.props.id)} onMouseEnter={this.hoverHandler} onMouseLeave={this.hoverHandler2}>
-                            {/* {this.props.img} */}
-                            <CSSTransition in={this.state.animate} timeout={500} classNames="cardImage" >
+                <div className="card" style={{position:"relative"}}>
+                        <Row noGutters className="imageContainer" onClick={this.props.clickHandler.bind(this, this.props.id)}>
                             <Image className={imageClass}  src={this.imageLink}></Image>
-                            {/* <img src={this.imageLink}></img> */}
-                            </CSSTransition>
                         </Row>
-                    <CSSTransition in={this.state.animate} timeout={500} classNames="detail" key={1} style={{position:"absolute",bottom:"0",width:"100%"}}>
-                        <Row noGutters className={this.state.bloque}>
+                        <Row noGutters className={this.state.bloque} style={{position:"absolute",bottom:"0",width:"100%"}}>
                             <p className="mb-0">{this.props.description}</p>
                         </Row>
-                    </CSSTransition>
                 </div>
             </Col>
         )

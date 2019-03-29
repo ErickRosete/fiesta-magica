@@ -1,71 +1,33 @@
-.descripcion{
-    /* font-size:30px; */
-    font-size:2vw;
-    text-align: center;
-    background-color:#f08ea7;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
-    color:white;
-    opacity:0;
+.descripcion {
+  /* font-size:30px; */
+  font-size: 2vw;
+  text-align: center;
+  background-color: #f08ea7;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  color: white;
+  opacity: 1;
+  height: 0vh;
 }
-.tarjeta{
-    padding:1rem;
+.tarjeta {
+  padding: 1rem;
 }
-.imageContainer{
-    background-color:#de365a;
+.imageContainer {
+  background-color: #de365a;
 }
-.imageClass{
-    width:100%;
-    height:auto;
-    max-height:30vh;
-    cursor:pointer;
-
-}
-
-/* .descripcionOff{
-    opacity: 0;
-} */
-
-.detail-enter {
-    opacity: 0;
+.imageClass {
+  width: 100%;
+  height: auto;
+  max-height: 30vh;
+  cursor: pointer;
 }
 
-.detail-enter-active {
-    opacity: 1;
-    transition: opacity 500ms;
+/* animacion en hover in y hover out */
+.card:hover .descripcion {
+  height: 7vh;
 }
 
-.detail-enter-done {
-    opacity: 1;
+.descripcion {
+  height: 0vh;
+  transition: height 500ms ease-in-out;
 }
-
-.cardImage-enter {
-    /* opacity: 0; */
-    /* transform: translate3d(-100%, 0, 0); */
-    /* animation-name: myframes; */
-    /* animation-duration: 400ms; */
-    height:30vh;
-}
-.cardImage-enter-active {
-    height:20vh;
-    transition: height 500ms;
-}
-
-.cardImage-enter-done {
-    height:20vh;
-}
-/* @keyframes myframes{
-    from{
-        height:30vh
-
-    }
-    to{
-        height:20vh
-    }
-}
-   */
-
-   /* https://github.com/reactjs/react-transition-group/issues/157
-   https://www.w3schools.com/csSref/css3_pr_animation-keyframes.asp
-   https://www.youtube.com/watch?v=f1WMjDx4snI
-   http://reactcommunity.org/react-transition-group/css-transition */

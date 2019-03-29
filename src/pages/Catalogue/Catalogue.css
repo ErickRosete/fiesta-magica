@@ -70,7 +70,7 @@
     transform: translate(-50%, -50%) !important;
 }
 
-.detail-enter {
+/* .detail-enter {
     opacity: 0;
 }
 
@@ -81,4 +81,6 @@
 
 .detail-enter-done {
     opacity: 1;
-}
+} */
+
+/* <Row noGutters className="imageContainer" onClick={this.props.clickHandler.bind(this, this.props.id)} onMouseEnter={this.hoverHandler} onMouseLeave={this.hoverHandler2}> */
