@@ -89,6 +89,8 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+/*Quienes somos */
+
 .quienes-somos {
     display: flex;
     height: 100%;
@@ -96,10 +98,56 @@
     justify-content: space-evenly;
 }
 
-
-.quienes-somos span{
+.quienes-somos span {
     font-size: 1.25rem;
 }
+
+.relative {
+    position: relative;
+}
+
+.absolute{
+    position: absolute;
+}
+
+.absolute-right {
+    position: absolute;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.slideLeft-enter {
+    left: 60vh;
+    opacity: 0;
+}
+
+.slideLeft-enter-done {
+    left: 0;
+}
+
+.slideLeft-enter.slideLeft-enter-active {
+    opacity: 1;
+    left: 0;
+    transition: 1s;
+}
+
+.slideLeft-exit {
+    opacity: 1;
+    left: 0;
+
+}
+
+.slideLeft-exit.slideLeft-exit-active {
+    opacity: 1;
+    left: 0;
+}
+.slideLeft-exit-done {
+    opacity: 1;
+}
+
+/*populares*/
 
 .populares-container {
     background-color: #f7f1f5;
@@ -119,13 +167,16 @@
 .populares-container img {
     padding-left: 2rem;
     padding-right: 2rem;
-    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
-    -moz-animation: fadein 2s; /* Firefox < 16 */
-     -ms-animation: fadein 2s; /* Internet Explorer */
-      -o-animation: fadein 2s; /* Opera < 12.1 */
-         animation: fadein 2s;
+    -webkit-animation: fadein 2s;
+    /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s;
+    /* Firefox < 16 */
+    -ms-animation: fadein 2s;
+    /* Internet Explorer */
+    -o-animation: fadein 2s;
+    /* Opera < 12.1 */
+    animation: fadein 2s;
 }
-
 
 /****** Personaliza tu fiesta ******/
 
@@ -138,9 +189,8 @@
     align-content: center;
     align-items: center;
     justify-content: center;
-
     background-image: url('../../Assets/Images/Home/foto3.png');
-    background-repeat: no-repeat;   
+    background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
@@ -169,7 +219,7 @@
     align-content: center;
     align-items: center;
     justify-content: center;
-    padding-bottom:1rem;
+    padding-bottom: 1rem;
 }
 
 .interesa_container h2 {
@@ -180,9 +230,10 @@
     font-size: 1rem;
 }
 
-.interesa_globos{
+.interesa_globos {
     padding: 0 0.5rem;
 }
+
 /*otros*/
 
 span {
@@ -190,14 +241,14 @@ span {
 }
 
 @media (min-width: 600px) {
-    .personal-banner{
+    .personal-banner {
         width: 100%;
         height: 60vh;
     }
-    .personal-banner h1{
+    .personal-banner h1 {
         font-size: 3rem;
     }
-    .personal-banner h2{
+    .personal-banner h2 {
         font-size: 1.25rem;
     }
     .interesa_container h2 {
@@ -216,5 +267,11 @@ span {
     }
     .banner-fiestas {
         font-size: 6rem;
+    }
+}
+
+@media(min-width:800px){
+    .quienes-somos{
+        position:fixed;
     }
 }
