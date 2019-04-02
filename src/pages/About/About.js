@@ -3,10 +3,10 @@ import Row from 'react-bootstrap/Row'
 //import Col from 'react-bootstrap/Col'
 import Layout from "../../components/Layout/Layout";
 
-import {  Container,Col} from "react-bootstrap"
+import { Container, Col } from "react-bootstrap"
 import { Helmet } from "react-helmet";
 import "./About.css"
-import aboutBanner from  "../../Assets/Images/About/placeholder.png"
+import aboutBanner from "../../Assets/Images/About/placeholder.png"
 
 export class AboutPage extends Component {
     constructor(props) {
@@ -38,9 +38,9 @@ export class AboutPage extends Component {
                             cillum
                         </span>
                     </Container>
-                    <Container fluid className="py-4 bg-purple">
+                    <Container fluid className="bg-purple vision_container">
                         <Row>
-                            <Col xs={12} md={6} >
+                            <Col xs={12} md={6} className="vr">
                                 <div className="vision">
                                     <h1>Misión</h1>
                                     <span>
@@ -51,7 +51,7 @@ export class AboutPage extends Component {
                                     </span>
                                 </div>
                             </Col>
-                            <Col xs={12} md={6} className="vl">
+                            <Col xs={12} md={6}>
                                 <div className="vision">
                                     <h1 className="">Visión</h1>
                                     <span>
@@ -65,7 +65,7 @@ export class AboutPage extends Component {
                         </Row>
                     </Container>
                     <Container fluid>
-                        <div className="flex-center valores">
+                        <div className="valores">
                             <h2> Valores </h2>
                             <div className="valores-list">
                                 <span> Responsabilidad </span>
@@ -81,9 +81,5 @@ export class AboutPage extends Component {
         )
     }
 
-  static propTypes = {
-
-  }
-  
 }
 export default AboutPage
