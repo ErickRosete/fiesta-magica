@@ -1,7 +1,9 @@
 /* #content {
     margin-top: 98px;
 } */
-
+.color-white{
+    color:white;
+}
 .banner-fiestas {
     min-height: 90vh;
     display: flex;
@@ -114,37 +116,43 @@
     position: absolute;
 }
 
-.hidden {
-    opacity: 0;
+.overflow-hidden{
+    overflow: hidden;
+}
+
+.opacity-0{
+    opacity:0;
 }
 
 .slideLeft-enter {
-    left: 60vh;
+    transform: translateX(100%);
     opacity: 0;
 }
 
 .slideLeft-enter-done {
-    left: 0;
+    transform: translateX(0);
+    opacity:1;
 }
 
 .slideLeft-enter.slideLeft-enter-active {
     opacity: 1;
-    left: 0;
+    transform: translateX(0);
     transition: 1s;
 }
 
-.slideLeft-exit {
-    opacity: 1;
-    left: 0;
-
+.slideRight-enter{
+    transform: translateX(-100%);
 }
 
-.slideLeft-exit.slideLeft-exit-active {
-    opacity: 1;
-    left: 0;
+.slideRight-enter-done {
+    transform: translateX(0);
+    opacity:1;
 }
-.slideLeft-exit-done {
+
+.slideRight-enter.slideRight-enter-active {
     opacity: 1;
+    transform: translateX(0);
+    transition: 1s;
 }
 
 /*populares*/
@@ -267,11 +275,5 @@ span {
     }
     .banner-fiestas {
         font-size: 6rem;
-    }
-}
-
-@media(min-width:800px){
-    .quienes-somos{
-        position:fixed;
     }
 }
