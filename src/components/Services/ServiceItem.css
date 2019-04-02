@@ -17,7 +17,8 @@
 }
 
 .services_list .row{
-    margin: 1rem 0;
+    /* margin: 1rem 0; */
+    margin-bottom: 4rem;
 }
 
 .services_list p{
@@ -35,4 +36,11 @@
     height:auto;
     max-height:30vh;
     cursor:pointer;
+}
+
+
+@media only screen and (max-width: 768px) {
+    body{
+        /* background-color:blue; */
+    }
 }

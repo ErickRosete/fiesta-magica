@@ -10,10 +10,10 @@ const ServiceItem = (props) => {
 
     return (
         <Row className="service">
-            <Col className="bg-pink txt-white p-0" sm={4} xs={12}>
+            <Col className="bg-pink txt-white p-0" xs={12} md={4} >
                 <img src={img} alt="FOTO" className="serviceImage" ></img>
             </Col>
-            <Col className="bg-light-pink txt-white" sm={8} xs={12}>
+            <Col className="bg-light-pink txt-white" xs={12} md={8} >
                 <div className="services_list-content">
                     <h1>{title}</h1>
                     <p>{desc}</p>
