@@ -10,7 +10,7 @@ import {
   faMapMarkerAlt,
   faSearch
 } from "@fortawesome/free-solid-svg-icons";
-import { faFacebook, faTwitter, faYoutube, faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook, faTwitter, faYoutube, faLinkedin, faInstagram, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 import { ApolloProvider } from "react-apollo";
 import ApolloClient from "apollo-boost";
@@ -39,7 +39,8 @@ class App extends Component {
       faSearch,
       faHome,
       faChevronLeft,
-      faMapMarkerAlt
+      faMapMarkerAlt,
+      faWhatsapp
     ]);
 
     return (

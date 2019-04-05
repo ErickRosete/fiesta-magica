@@ -55,7 +55,7 @@
 
 @media only screen and (max-width: 768px) {
     body{
-        background-color:blue;
+        /* background-color:blue; */
     }
     .adicional-element-container{
         padding:0rem 3rem;

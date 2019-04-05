@@ -27,17 +27,54 @@ export class AboutPage extends Component {
             scriptLoaded: false,
             center: [32.6614358, -115.48000560000003],
             zoom: 15,
-            greatPlaceCoords: { lat: 59.724465, lng: 30.080121 }
+            greatPlaceCoords: { lat: 59.724465, lng: 30.080121 },
+            name:"",
+            email:"",
+            phone:"",
+            message:"",
         };
     }
 
-  static propTypes = {
+    static propTypes = {
 
-  }
+    }
 
     initMap = () => {
         this.setState({
             scriptLoaded: true,
+        })
+    }
+
+    changeName=(event)=>{
+        console.log("changing name")
+        console.log(event.target.value)
+        this.setState({
+            name:event.target.value
+        })
+    }
+
+    handleChange = name => event => {
+        this.setState({
+          [name]: event.target.value,
+        });
+      };
+
+    handleClick=()=>{
+        console.log(this.state)
+        const destino="http://localhost:5000/sendEmail"
+        const objeto={
+            name:this.state.name,
+            email:this.state.email,
+            phone:this.state.phone,
+            message:this.state.message,
+        }
+        fetch(destino, {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(objeto)
         })
     }
 
@@ -61,22 +98,22 @@ export class AboutPage extends Component {
                         <Form>
                             <Form.Group controlId="exampleForm.ControlInput1">
                                 <Form.Label style={{color:"#1a1d50",fontSize:"1.3rem",fontWeight:"bold"}}>Nombre Completo:</Form.Label>
-                                <Form.Control size="lg" type="text" className="bordes" />
+                                <Form.Control size="lg" type="text" className="bordes" onChange={this.handleChange('name')} />
                             </Form.Group>
                             <Form.Group controlId="exampleForm.ControlInput2">
                                 <Form.Label style={{color:"#1a1d50",fontSize:"1.3rem",fontWeight:"bold"}}>Correo electrónico:</Form.Label>
-                                <Form.Control size="lg" type="email" className="bordes" />
+                                <Form.Control size="lg" type="email" className="bordes" onChange={this.handleChange('email')} />
                             </Form.Group>
                             <Form.Group controlId="exampleForm.ControlInput2">
                                 <Form.Label style={{color:"#1a1d50",fontSize:"1.3rem",fontWeight:"bold"}}>Teléfono:</Form.Label>
-                                <Form.Control size="lg" type="phone"  className="bordes"  />
+                                <Form.Control size="lg" type="phone"  className="bordes"  onChange={this.handleChange('phone')} />
                             </Form.Group>
                             <Form.Group controlId="exampleForm.ControlTextarea1">
                                 <Form.Label style={{color:"#1a1d50",fontSize:"1.3rem",fontWeight:"bold"}}>Mensaje:</Form.Label>
-                                <Form.Control as="textarea" rows="10" className="bordes"  />
+                                <Form.Control as="textarea" rows="10" className="bordes" onChange={this.handleChange('message')}  />
                             </Form.Group>
                             <div className="buttonContainer" >
-                                <Button variant="outline-dark" size="lg" className="btn-especial">Enviar</Button>
+                                <Button variant="outline-dark" size="lg" className="btn-especial" onClick={this.handleClick}>Enviar</Button>
                             </div>
                         </Form>
                     </div>
