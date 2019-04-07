@@ -142,6 +142,7 @@
 
 .slideRight-enter{
     transform: translateX(-100%);
+    opacity:0;
 }
 
 .slideRight-enter-done {
