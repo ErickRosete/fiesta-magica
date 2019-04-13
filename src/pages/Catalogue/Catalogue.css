@@ -52,6 +52,12 @@
     color:white;
     border:  5px solid #08b9db;
 }
+.activado{
+    background-color: #08b9db;
+    /* font-size:3rem; */
+    color:white;
+    border:  5px solid #08b9db;
+}
 .modal-special{
     width:90vw;
     max-width:100vw;

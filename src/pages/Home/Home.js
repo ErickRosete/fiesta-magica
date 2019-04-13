@@ -55,8 +55,12 @@ export class HomePage extends Component {
           this.setState({ popularesTransition })
         },
         1000 * i);
-      console.log()
     }
+  }
+  
+  handleClick=(url)=>{
+    console.log(url)
+    this.props.history.push(url);
   }
 
   render() {
@@ -76,7 +80,7 @@ export class HomePage extends Component {
               <Col sm={5} className="banner-fiestas-container py-5">
                 <h1 className='mb-3'>Todo para tus <div className='fiestas-header'> fiestas </div>
                 </h1>
-                <Button variant="outline-light" className="mt-3"> Ver catálogo </Button>
+                <Button variant="outline-light" className="mt-3" onClick={this.handleClick.bind(this,"/catalogo")}> Ver catálogo </Button>
               </Col>
             </Row>
             <div ref={this.aboutRef}>
@@ -100,12 +104,9 @@ export class HomePage extends Component {
                     <div className=" pl-3 pr-3 py-4 quienes-somos opacity-0">
                       <h2 className="mb-3"> ¿Quienes Somos?</h2>
                       <span>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                        cillum
+                      Fiesta Mágica busca ofrecer la mejor experiencia de entretenimiento de niñ@s a través de servicios de la mas alta calidad, organizando fiestas y eventos sociales que todos los invitados recuerden como un día de diversión inolvidable.
                       </span>
-                      <Button variant="outline-dark" className="mt-3 btn-custom-block"> Conoce más </Button>
+                      <Button variant="outline-dark" className="mt-3 btn-custom-block" onClick={this.handleClick.bind(this,"/nosotros")}> Conoce más </Button>
                     </div>
                   </CSSTransition>
                 </Col>
@@ -120,7 +121,7 @@ export class HomePage extends Component {
               <div className="personal-banner">
                 <h1>¡Personaliza tu fiesta! </h1>
                 <h2>Agrega ese toque especial</h2>
-                <Button variant="outline-light" className="mt-3"> Ver catálogo </Button>
+                <Button variant="outline-light" className="mt-3" onClick={this.handleClick.bind(this,"/catalogo")}> Ver catálogo </Button>
               </div>
             </Row>
 
@@ -130,7 +131,7 @@ export class HomePage extends Component {
               <Col xs={6} md={4} className="px-0">
                 <div className="interesa_container">
                   <h2>¿Te interesa?</h2>
-                  <Button variant="outline-dark"> Solicitar presupuesto </Button>
+                  <Button variant="outline-dark" onClick={this.handleClick.bind(this,"/contacto")}> Solicitar presupuesto </Button>
                 </div>
               </Col>
               <Col xs={3} md={4} className="interesa_globos">

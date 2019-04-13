@@ -8,6 +8,9 @@ query Products{
         price
         quantity
         imageLinks
+        height
+        width
+        long
         shortDescription
         subcategories {
         name

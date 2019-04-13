@@ -44,17 +44,19 @@ export class ProductDetail extends Component {
                         </p>
                     </Col>
                 </Row>
-                <Row className={rowClass}>
-                    <div className={colClass}>
-                        <span className="adicional">Alto</span><span className="secSpec">10cm</span>
-                    </div>
-                    <div className={colClass}>
-                        <span className="adicional">Ancho</span><span className="secSpec">20cm</span>
-                    </div>
-                    <div className={colClass}>
-                        <span className="adicional">Largo</span><span className="secSpec">30cm</span>
-                    </div>
-                </Row>
+                {this.props.height>=0&&
+                    <Row className={rowClass}>
+                        <div className={colClass}>
+                            <span className="adicional">Alto</span><span className="secSpec">  {this.props.height} cm</span>
+                        </div>
+                        <div className={colClass}>
+                            <span className="adicional">Ancho</span><span className="secSpec">  {this.props.width} cm</span>
+                        </div>
+                        <div className={colClass}>
+                            <span className="adicional">Largo</span><span className="secSpec">  {this.props.long} cm</span>
+                        </div>
+                    </Row>
+                }
             </div>
         )
     }

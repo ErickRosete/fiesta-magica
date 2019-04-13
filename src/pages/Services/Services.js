@@ -74,6 +74,11 @@ export class ServicesPage extends Component {
         this.getServices();
     }
 
+    handleClick=(url)=>{
+        console.log(url)
+        this.props.history.push(url);
+      }
+    
     render() {
         return (
             <Layout>
@@ -110,7 +115,7 @@ export class ServicesPage extends Component {
 
                 <div className="info_request">
                     <h2> Solicita más información</h2>
-                    <Button variant="outline-dark"> Enviar mensaje </Button>
+                    <Button variant="outline-dark" onClick={this.handleClick.bind(this,"/contacto")}> Enviar mensaje </Button>
                 </div>
             </Layout>
         );

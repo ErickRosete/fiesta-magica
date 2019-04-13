@@ -11,24 +11,24 @@ const Populares = (props) => {
     return (
         <Row className="populares-container">
             <CSSTransition in={props.transition[0]} timeout={400} classNames="fade" >
-                <h2 className="opacity-0">Populares</h2>
+                <h2 className="animation-object">Populares</h2>
             </CSSTransition>
             <Col xs={12}>
                 <Row>
                     <CSSTransition in={props.transition[1]} timeout={400} classNames="fade" >
-                        <Col xs={12} md={4} className="opacity-0">
+                        <Col xs={12} md={4} className="animation-object">
                             <img className="img-fluid" src={populares1} alt="brincolinas"></img>
                             <h3>Brincolinas</h3>
                         </Col>
                     </CSSTransition>
                     <CSSTransition in={props.transition[2]} timeout={400} classNames="fade" >
-                        <Col xs={12} md={4} className="opacity-0">
+                        <Col xs={12} md={4} className="animation-object">
                             <img className="img-fluid" src={populares2} alt="decoraciones"></img>
                             <h3>Decoraciones</h3>
                         </Col>
                     </CSSTransition>
                     <CSSTransition in={props.transition[3]} timeout={400} classNames="fade" >
-                        <Col xs={12} md={4} className="opacity-0">
+                        <Col xs={12} md={4} className="animation-object">
                             <img className="img-fluid" src={populares3} alt="manteles"></img>
                             <h3> Manteles</h3>
                         </Col>

@@ -1,12 +1,16 @@
-.fade-enter {
+.animation-object{
     opacity: 0;
 }
 
-.fade-enter-active {
+.animation-object.fade-enter {
+    opacity: 0;
+}
+
+.animation-object.fade-enter-active {
     opacity: 1;
     transition: opacity 400ms ease-in;
 }
 
-.fade-enter-done {
+.animation-object.fade-enter-done {
     opacity: 1;
 }
