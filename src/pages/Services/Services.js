@@ -14,6 +14,7 @@ import ServiceItem from '../../components/Services/ServiceItem'
 //npm i react-transition-group --s 
 import CSSTransition from "react-transition-group/CSSTransition";
 
+const small = 'https://accelerated.atoms.crystallize.digital/snowball/images/PalmaSpeedJusterteBilder-15/_resized_300.jpg';
 
 export class ServicesPage extends Component {
     constructor(props) {
@@ -78,7 +79,30 @@ export class ServicesPage extends Component {
         console.log(url)
         this.props.history.push(url);
       }
-    
+
+    getFinal=(image,serverPath)=>{
+        let imagePath;
+        let finalPath;
+        if(image !==undefined){
+            if(image.split("http://localhost:5000/")[1] !==undefined)
+            {
+                imagePath=image.split("http://localhost:5000/")[1] 
+                finalPath=serverPath+imagePath;
+            }
+            else if(image.split("https")[1]!==undefined){
+                finalPath=image;
+            }
+            else{
+                //no empieza con localhost la imagen guardada
+                finalPath=small;
+
+            }         
+        }
+        else{
+            finalPath=small;
+        }
+        return finalPath
+    }
     render() {
         return (
             <Layout>
@@ -96,14 +120,16 @@ export class ServicesPage extends Component {
                         {this.state.services[0]!=="" && this.state.services.map((element,index)=>{
                             // const serverPath="https://fiesta-magica-consola.herokuapp.com/"
                             const serverPath=process.env.REACT_APP_SERVER_URL+"/"
-                            const imagePath=element.imageLinks[0].split("http://localhost:5000/")[1];
-                            const path=serverPath+imagePath;
+                            // const imagePath=element.imageLinks[0].split("http://localhost:5000/")[1];
+                            // const path=serverPath+imagePath;
+                            const finalPath=this.getFinal(element.imageLinks[0],serverPath);
+
                             // console.log(index)
                             // console.log(path)
                             return(
                                 <CSSTransition in={this.state.serviceTransition[index]} timeout={500} classNames="fade"   key={element._id} >
                                     <ServiceItem
-                                        img={path}
+                                        img={finalPath}
                                         title={element.name}
                                         desc={element.shortDescription}
                                     />
