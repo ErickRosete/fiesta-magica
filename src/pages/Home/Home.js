@@ -11,6 +11,8 @@ import "./Home.css";
 import foto2 from "../../Assets/Images/Home/foto2.png"
 import globos from "../../Assets/Images/Home/globos.png"
 import Populares from "../../components/Home/Populares"
+import { withApollo  } from "react-apollo";
+import { GET_PRODUCTS } from "./constants";
 
 export class HomePage extends Component {
   constructor(props) {
@@ -19,11 +21,53 @@ export class HomePage extends Component {
     this.popularesRef = React.createRef();
     this.state = {
       aboutAnimations: false,
-      popularesTransition: [false, false, false, false]
+      popularesTransition: [false, false, false, false],
+      filteredProducts:[""]
     };
   }
 
+  getProducts=()=>{
+    console.log("starting query")
+    // const id= this.props.match.params.id
+    // console.log(this.props.client)
+    console.log(GET_PRODUCTS)
+    this.props.client
+      .query({
+        query: GET_PRODUCTS,
+      })
+      .then(data => {
+          console.log("===productos")
+          console.log(data.data.products)
+          const filtrados=data.data.products.filter((producto)=>{
+            return producto.popular
+          })
+          console.log("===populares")
+          console.log(filtrados)
+          console.log(filtrados.slice(0,3))
+          this.setState({
+            filteredProducts:filtrados.slice(0,3)
+          })
+        // this.setState({
+        //     filteredProducts:data.data.products,
+        //     products:data.data.products
+        // })
+        // this.setState({
+        //   id:data.data.user._id
+        // })
+      })
+      .catch(error => {
+        console.log("error")
+        console.log(error)
+        if(error.graphQLErrors.length>0)
+        console.log(`error: ${error.graphQLErrors[0].message}`)
+        this.setState({
+          error:true
+        })
+    });
+  }
+
   componentDidMount() {
+    this.getProducts();
     window.addEventListener("scroll", this.scrollHandler);
   }
 
@@ -114,7 +158,7 @@ export class HomePage extends Component {
             </div>
 
             <div ref={this.popularesRef}>
-              <Populares transition={this.state.popularesTransition}></Populares>
+              <Populares transition={this.state.popularesTransition} products={this.state.filteredProducts}></Populares>
             </div>
 
             <Row>
@@ -144,4 +188,4 @@ export class HomePage extends Component {
 
   }
 }
-export default HomePage;
+export default withApollo(HomePage);

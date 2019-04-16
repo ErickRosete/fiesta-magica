@@ -262,10 +262,10 @@ export class CataloguePage extends Component {
                     </Modal.Body>
                 </Modal>
                 
-                <Row style={{margin:"0",padding:"1rem",paddingLeft:"4rem",paddingRight:"4rem"}}>
+                <Row className="catalogueContainer" >
                     {this.state.categories[0]!=="" && this.state.categories.map((element)=>{
                         return(
-                            <Col xs="3" style={{marginBottom:"1rem"}} key={element._id}>
+                            <Col xs="6" sm="3" style={{marginBottom:"1rem"}} key={element._id}>
                                 <Button variant="outline-primary" className="catalogueButton" block onClick={this.CatalogueClick}>{element.name}</Button>
                             </Col>                        
                         )

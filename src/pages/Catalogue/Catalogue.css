@@ -75,8 +75,36 @@
     left: 50%;
     transform: translate(-50%, -50%) !important;
 }
+.catalogueContainer{
+    margin: 0;
+    padding:1rem;
+    padding-left:4rem;
+    padding-right:4rem;
+}
 
-/* .detail-enter {
+@media only screen and (max-width: 600px) {
+    .catalogueContainer{
+        margin: 0;
+        padding:0;
+    }
+    .renglon{
+        margin:0;
+        padding:0;
+    }
+    .catalogueButton {
+        font-size:1rem;
+        padding:0.5rem 0;
+    }
+   p.content, span.adicional,span.secSpec{
+        font-size:1rem;
+    }
+    p.title{font-size:1.3rem;}
+    div.adicional-container.justify-content-center.row{
+        margin:0;
+    }    
+}
+
+  /* .detail-enter {
     opacity: 0;
 }
 

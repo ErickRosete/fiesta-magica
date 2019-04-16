@@ -1,11 +1,12 @@
 import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
-import logo from "../../../Assets/Images/Logos/logo.png";
+import logo from "../../../Assets/Images/Logos/logo2.png";
 
 import "./MainNavigation.css";
 
 const mainNavigation = props => {
+
   return (
     <header className="main-navigation">
       <Navbar
@@ -15,7 +16,9 @@ const mainNavigation = props => {
         variant="dark"
         style={{ backgroundColor: props.navbarColor }}
       >
-        <img src={logo} className="logo" alt="Fiesta-magica-Logo"/>
+        <Nav.Link as={NavLink} to="/inicio">
+          <img src={logo} className="logo" alt="Fiesta-magica-Logo"/>
+        </Nav.Link>
         <Navbar.Toggle className="ml-auto"/>
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ml-auto">

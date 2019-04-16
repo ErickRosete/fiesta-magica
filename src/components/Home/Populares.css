@@ -14,3 +14,8 @@
 .animation-object.fade-enter-done {
     opacity: 1;
 }
+.circular{
+    /* max-height:10% */
+    border-radius: 50%;
+
+}

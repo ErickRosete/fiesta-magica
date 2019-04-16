@@ -25,9 +25,11 @@ export class AboutPage extends Component {
         super(props);
         this.state = {
             scriptLoaded: false,
+            
             center: [32.6614358, -115.48000560000003],
+            greatPlaceCoords: { lat: 32.6614358, lng:-115.48000560000003 },
             zoom: 15,
-            greatPlaceCoords: { lat: 59.724465, lng: 30.080121 },
+
             name:"",
             email:"",
             phone:"",
@@ -126,14 +128,9 @@ export class AboutPage extends Component {
                                         center={this.state.center}
                                         defaultZoom={this.state.zoom}
                                     >
-                                    {/* <AnyReactComponent
-                                        lat={this.state.center.lat}
-                                        lng={this.state.center.lng}
-                                        text="Ubicación"
-                                    /> */}
                                     <Marker 
-                                        lat={this.state.center.lat}
-                                        lng={this.state.center.lng}
+                                        lat={this.state.greatPlaceCoords.lat}
+                                        lng={this.state.greatPlaceCoords.lng}
                                     />
                                     </GoogleMapReact>
                             </div>
