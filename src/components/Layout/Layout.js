@@ -9,8 +9,8 @@ import Button from 'react-bootstrap/Button'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const whatsUrl="https://wa.me/15551234567?text=Iam%20interested%20"
-const whatsUrlButton=`javascript:window.open('${whatsUrl}', 'yourWindowName', 'width=700,height=600,top=200, left=460');`
-const mimetodo=()=>{
+// const whatsUrlButton=`javascript:window.open('${whatsUrl}', 'yourWindowName', 'width=700,height=600,top=200, left=460');`
+const displayWhats=()=>{
   window.open(whatsUrl, 'yourWindowName', 'width=700,height=600,top=200, left=460')
 }
 
@@ -22,7 +22,7 @@ const Layout = props => {
       {/* <a href="https://api.whatsapp.com/send?phone=6862124736&text=mensaje">Contactame</a> */}
       {/* <a href="https://wa.me/15551234567?text=I'm%20interested%20in%20your%20car%20for%20sale">contact</a> */}
       {/* <a href={whatsUrlButton}>Test</a> */}
-      <Button variant="success" className="contactWhats" onClick={mimetodo}>
+      <Button variant="success" className="contactWhats" onClick={displayWhats}>
           WhatsApp <FontAwesomeIcon icon={['fab', 'whatsapp']}  size="1x"/>
       </Button>
       {/* <FontAwesomeIcon className="marcadormagico"  icon="whatsapp-square" size="5x" /> */}
