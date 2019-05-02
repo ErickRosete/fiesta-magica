@@ -212,28 +212,31 @@ export class CataloguePage extends Component {
     json2=[{txt:"Decoraciones",id:"1"},{txt:"Brincolinas",id:"2"},{txt:"Trampolines",id:"3"},{txt:"Juegos",id:"4"},
     {txt:"Rockolas",id:"5"},{txt:"Globoflexia",id:"6"},{txt:"Carpas y lonas",id:"7"},{txt:"Mesas y sillas",id:"8"}]
     
-    clickHandler=(index,event)=>{
-        // console.log(index)
-        // console.log(event.target)
-        // console.log(event)
+    clickHandler=(id,event)=>{
+        console.log("debuggint")
+        console.log(event.target)
+        console.log(id)
+        let products=this.state.products;
+        console.log(products)
+        var found = products.find(function(element) {
+            return element._id== id;
+        });
         console.log("clicked product")
-        console.log(this.state.products[index])
+        console.log(found)
         const serverPath="https://fiesta-magica-consola.herokuapp.com/"
-        const finalPath=this.getFinal(this.state.products[index].imageLinks[0],serverPath);
-        // const path=serverPath+imagePath;
-        // console.log("clicked image path")
-        // console.log(finalPath)
+        const finalPath=this.getFinal(found.imageLinks[0],serverPath);
         const json3={
-            selectedDescription:this.state.products[index].shortDescription,
+            selectedDescription:found.shortDescription,
             selectedImage:finalPath,
-            selectedName:this.state.products[index].name,
-            selectedHeight:this.state.products[index].height,
-            selectedWidth:this.state.products[index].width,
-            selectedLong:this.state.products[index].long
+            selectedName:found.name,
+            selectedHeight:found.height,
+            selectedWidth:found.width,
+            selectedLong:found.long
         }
         this.setState({modal:true,...json3})
         console.log(json3)
     }
+    
     render() {
         return (
             <Layout>
@@ -291,7 +294,7 @@ export class CataloguePage extends Component {
                                 description={element.name} 
                                 clickHandler={this.clickHandler}
                                 key={element._id}
-                                id={index}>
+                                id={element._id}>
                             </Card>
                         )
                     })}
