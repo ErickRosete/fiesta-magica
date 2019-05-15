@@ -17,5 +17,7 @@
 .circular{
     /* max-height:10% */
     border-radius: 50%;
-
+    height:30vh;
+    width:100%;
+    /* margin:auto */
 }
