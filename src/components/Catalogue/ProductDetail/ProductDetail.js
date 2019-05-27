@@ -19,22 +19,29 @@ export class ProductDetail extends Component {
     }
     render() {
         return (
-            <Row>
-                <Col md="4">
-                    <Image className="imageClass2"  src={this.imageLink}></Image>
-                </Col>
-                <Col md="8">
-                    <p className="title">
-                        {this.props.name}
-                    </p>
-                    <p className="title">
-                        Descripcion:
-                    </p>
-                    <p className="content">
-                        {this.props.desc}
-                    </p>
-                </Col>
-            </Row>
+            <div>
+                <Row style={{marginBottom:"1rem"}}>
+                    <Col md="4">
+                        <Image className="imageClass2"  src={this.imageLink}></Image>
+                    </Col>
+                    <Col md="8">
+                        <p className="title">
+                            {this.props.name}
+                        </p>
+                        <p className="title">
+                            Descripcion:
+                        </p>
+                        <p className="content">
+                            {this.props.desc}
+                        </p>
+                    </Col>
+                </Row>
+                <Row className="adicional">
+                    <p >Alto</p><p className="secSpec">10cm</p>
+                    <p>Ancho</p><p className="secSpec">20cm</p>
+                    <p>Largo</p><p className="secSpec">30cm</p>
+                </Row>
+            </div>
         )
     }
 }

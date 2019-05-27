@@ -19,3 +19,19 @@
     /* left: 50%; */
     transform: translate(0,-50%) 
 }
+.adicional{
+    font-family: "Open Sans";
+    font-weight:bold;
+    font-size:2.5vw;
+    color:#1a1b51;
+
+    margin:0;
+    /* padding-left:4rem;
+    padding-right:4rem */
+
+    /* padding: 1rem; */
+}
+.secSpec{
+    margin-right:1rem;
+    border: 4mm ridge rgb(170, 50, 220, .6);
+}
