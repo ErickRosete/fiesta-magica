@@ -1,0 +1,46 @@
+.services_list-content{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-content: left;
+    align-items: left;
+    justify-content: center;
+    padding: 1rem 0px;
+    height: 100%;
+}
+
+.services_list h1 {
+    padding-bottom: 1rem;
+    text-align: left;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.services_list .row{
+    /* margin: 1rem 0; */
+    margin-bottom: 4rem;
+}
+
+.services_list p{
+    font-size: 1.3rem;
+    text-align: left;
+}
+
+.services_list h2 {
+    margin-top: 2rem;
+    font-size: 3.75rem;
+    padding: 1rem 0px;
+}
+.serviceImage{
+    width:100%;
+    height:auto;
+    max-height:30vh;
+    cursor:pointer;
+}
+
+
+@media only screen and (max-width: 768px) {
+    body{
+        /* background-color:blue; */
+    }
+}

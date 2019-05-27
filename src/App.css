@@ -4,6 +4,8 @@
   --deep-blue-color: #1b1c54;
   --ligth-blue-color: #06badf;
   --green-color: #c1da38;
+  --pink-color: #DE365A;
+  --light-pink-color: #F08EA7;
 }
 
 /*Common*/
@@ -40,4 +42,16 @@ span {
 
 .bg-green {
   background-color: var(--green-color);
+}
+
+.bg-pink{
+  background-color: var(--pink-color);
+}
+
+.bg-light-pink{
+  background-color: var(--light-pink-color);
+}
+
+.txt-white{
+  color:white;
 }

@@ -11,18 +11,11 @@ query Products{
         height
         width
         long
+        popular
         shortDescription
         subcategories {
         name
         }
-        _id
-    }
-}`;   
-export const GET_CATEGORIES= gql`
-query Subcategories{
-    subcategories{
-        name
-        description
         _id
     }
 }`;   

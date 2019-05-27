@@ -10,7 +10,7 @@ import {
   faMapMarkerAlt,
   faSearch
 } from "@fortawesome/free-solid-svg-icons";
-import { faFacebook, faTwitter, faYoutube, faLinkedin, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook, faTwitter, faYoutube, faLinkedin, faInstagram, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 
 import { ApolloProvider } from "react-apollo";
 import ApolloClient from "apollo-boost";
@@ -21,6 +21,8 @@ import HomePage from "./pages/Home/Home"
 import AboutPage from "./pages/About/About";
 import ContactPage from "./pages/Contact/Contact";
 import CataloguePage from "./pages/Catalogue/Catalogue";
+import ServicesPage from "./pages/Services/Services";
+
 const client = new ApolloClient({
   uri: `${process.env.REACT_APP_SERVER_URL}/graphql`
 });
@@ -37,7 +39,8 @@ class App extends Component {
       faSearch,
       faHome,
       faChevronLeft,
-      faMapMarkerAlt
+      faMapMarkerAlt,
+      faWhatsapp
     ]);
 
     return (
@@ -49,6 +52,7 @@ class App extends Component {
               <Route path="/nosotros" component={AboutPage} />
               <Route path="/contacto" component={ContactPage} />
               <Route path="/catalogo" component={CataloguePage} />
+              <Route path="/Servicios" component={ServicesPage} />
               <Redirect to="/inicio" />
             </Switch>
           </ApolloProvider>

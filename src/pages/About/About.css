@@ -11,16 +11,22 @@
     padding: 2rem;
 }
 
-.nosotros span {
-    font-size: 1.25rem;
+.about span {
+    font-size: 1rem;
 }
 
 .nosotros h2 {
     font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.vision_container {
+    padding: 0rem 3rem;
 }
 
 .vision {
-    padding: 2rem;
+    color: white;
+    padding: 2rem 0rem;
 }
 
 .vision h1 {
@@ -29,16 +35,17 @@
     color: white;
 }
 
-.vision span {
-    font-size: 1.25rem;
-    color: white;
-}
-
-.vl {
+.vr {
     border-left: none;
+    border-bottom: 0.5rem solid var(--ligth-blue-color);
 }
 
 .valores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
     padding-top: 4rem;
     padding-bottom: 2rem;
 }
@@ -48,32 +55,65 @@
     padding-bottom: 1rem;
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     align-content: center;
     justify-content: space-evenly;
 }
 
-.valores-list span {
+.about .valores-list span {
     font-size: 1.25rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    margin: 0rem;
 }
 
-span.site-font {
-    font-size: 1rem;
+/** animations **/
+.opacity-0{
+    opacity:0;
 }
 
+.slideLeft-enter {
+    transform: translateX(20%);
+    opacity: 0;
+}
+
+.slideLeft-enter-done {
+    transform: translateX(0);
+    opacity:1;
+}
+
+.slideLeft-enter.slideLeft-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: 1s;
+}
+
+.slideRight-enter{
+    transform: translateX(-20%);
+    opacity:0;
+}
+
+.slideRight-enter-done {
+    transform: translateX(0);
+    opacity:1;
+}
+
+.slideRight-enter.slideRight-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: 1s;
+}
+
+/****************/
 @media (min-width: 600px) {
-    .vl {
-        border-left: thick solid var(--ligth-blue-color);
-        padding-right: 1rem;
+    .about .valores-list span{
+        font-size: 1.5rem;
+        margin: 0rem 2rem;
     }
-    .valores-list {
-        flex-direction: row;
-    }
-    .valores-list {
-        padding-bottom: 2rem;
+    .about span {
+        font-size: 1.25rem;
     }
     .top-line {
         height: 0.5rem;
@@ -81,42 +121,23 @@ span.site-font {
     .nosotros {
         width: 60%;
     }
-   
-}
-.papa{
-    display:flex;
-    justify-content: center;
-}
-.hijo{
-    font-family: 'Open Sans', sans-serif;
-    font-size:60px;
-    font-weight: bold;
-    color:#191c51
-}
-.btn-especial{
-    font-size:2rem;
-    padding:.5rem 2rem;
-    border:  5px solid #8e55a2;
-    color:#8e55a2;
-    font-weight:bold
-}
-.btn-especial:hover{
-    background-color: #8e55a2;
-    font-size:2rem;
-    padding:.5rem 2rem;
-    border:  5px solid #8e55a2;
-    color:white;
-    font-weight:bold
 }
 
-.bordes{
-    border:  2px solid #1a1d50;
-}
-.direccion{
-    width:100%;
-    font-family: 'Open Sans', sans-serif;
-    font-size:30px;
-    font-weight: bold;
-    color:#191c51;
-    text-align:right
+@media(min-width: 770px){ 
+    .vision_container {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        padding-left: none;
+        padding-right: none;
+    }
+    .vision {
+        padding: 2rem;
+    }  
+    .vr {
+        border-right: 0.5rem solid var(--ligth-blue-color);
+        border-bottom: none;
+    }
+    .valores-list {
+        padding-bottom: 2rem;
+    }
 }

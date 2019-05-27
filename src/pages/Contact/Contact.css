@@ -1,6 +1,9 @@
 .papa{
     display:flex;
     justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-wrap:wrap;
 }
 .hijo{
     font-family: 'Open Sans', sans-serif;
@@ -33,5 +36,51 @@
     font-size:30px;
     font-weight: bold;
     color:#191c51;
-    text-align:right
+    text-align:right;
+    margin-right:4rem;
+
+}
+.contactForm{
+    width:40vw;
+    margin-left:4rem;
+    margin-right:4rem;
+}
+.mapContainer{
+    width:40vw;
+}
+.map{
+    height: 50vh;
+    width: 40vw;
+    margin-right:4rem;
+}
+.buttonContainer{
+    margin:0
+}
+/* If the browser window is 600px or smaller, the background color will be lightblue: */
+@media only screen and (max-width: 992px) {
+    body{
+        /* background-color:blue; */
+    }
+    .contactForm{
+        width:100vw;
+        margin-bottom:1rem;
+    }
+    .mapContainer{
+        width:100vw;
+    }
+    .map{
+        height: 50vh;
+        width: 100vw ;
+        margin:0;
+        padding: 1rem;
+    }
+    .direccion{
+        text-align: center;
+        margin:0
+    }
+    .buttonContainer{
+        display: flex;
+        justify-content: center;
+
+    }
 }

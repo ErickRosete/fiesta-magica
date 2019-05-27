@@ -52,6 +52,12 @@
     color:white;
     border:  5px solid #08b9db;
 }
+.activado{
+    background-color: #08b9db;
+    /* font-size:3rem; */
+    color:white;
+    border:  5px solid #08b9db;
+}
 .modal-special{
     width:90vw;
     max-width:100vw;
@@ -69,3 +75,46 @@
     left: 50%;
     transform: translate(-50%, -50%) !important;
 }
+.catalogueContainer{
+    margin: 0;
+    padding:1rem;
+    padding-left:4rem;
+    padding-right:4rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .catalogueContainer{
+        margin: 0;
+        padding:0;
+    }
+    .renglon{
+        margin:0;
+        padding:0;
+    }
+    .catalogueButton {
+        font-size:1rem;
+        padding:0.5rem 0;
+    }
+   p.content, span.adicional,span.secSpec{
+        font-size:1rem;
+    }
+    p.title{font-size:1.3rem;}
+    div.adicional-container.justify-content-center.row{
+        margin:0;
+    }    
+}
+
+  /* .detail-enter {
+    opacity: 0;
+}
+
+.detail-enter-active {
+    opacity: 1;
+    transition: opacity 500ms;
+}
+
+.detail-enter-done {
+    opacity: 1;
+} */
+
+/* <Row noGutters className="imageContainer" onClick={this.props.clickHandler.bind(this, this.props.id)} onMouseEnter={this.hoverHandler} onMouseLeave={this.hoverHandler2}> */

@@ -1,0 +1,41 @@
+.info_request {}
+
+.services_list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+}
+
+.info_request {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #f7f1f5;
+    margin-top: 1rem;
+}
+
+.info_request h2 {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.info_request .btn {
+    margin-bottom: 2rem;
+}
+
+.service, .service.fade-enter {
+    opacity: 0;
+}
+
+.service.fade-enter-active {
+    opacity: 1;
+    transition: opacity 500ms;
+}
+
+.service.fade-enter-done {
+    opacity: 1;
+}

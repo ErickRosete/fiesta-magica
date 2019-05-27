@@ -1,5 +1,4 @@
 .title{
-    /* font-size:100px; */
     font-size:3vw;
     color:#1a1b54;
     font-weight:bold
@@ -16,22 +15,65 @@
     cursor:pointer;
     position: relative;
     top: 50%;
-    /* left: 50%; */
     transform: translate(0,-50%) 
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> e86f8905cf35e7e2f0fd1d4f659bb8d5f6e78839
 .adicional{
     font-family: "Open Sans";
     font-weight:bold;
     font-size:2.5vw;
     color:#1a1b51;
-
     margin:0;
-    /* padding-left:4rem;
-    padding-right:4rem */
+    text-align: center;
+    /* centra verticalmente el texto */
+    display: inline-flex;
+    align-items: center;
+}
 
-    /* padding: 1rem; */
-}
 .secSpec{
-    margin-right:1rem;
-    border: 4mm ridge rgb(170, 50, 220, .6);
+    font-family: "Open Sans";
+    font-weight:bold;
+    font-size:2.5vw;
+    /* color:#1a1b51; */
+    /* margin-right:1rem;
+    
+ */
+ margin-left:1rem;
+ padding: 0rem 1rem;
+    border: 1mm solid rgb(170, 50, 220, .6);
 }
+
+.adicional-container{
+    margin:0;
+    margin-top:2rem;
+    margin-bottom: 2rem;
+}
+
+.adicional-element-container{
+    margin-bottom:2rem;
+    width:33%;
+    display:flex;
+    justify-content: center;
+    align-content: center;
+}
+
+@media only screen and (max-width: 768px) {
+    body{
+        /* background-color:blue; */
+    }
+    .adicional-element-container{
+        padding:0rem 3rem;
+        justify-content: start;
+        width:100%;
+    }
+    .adicional{
+        width:25%;
+    }
+    .secSpec{
+        width:50%;
+    }
+}
+

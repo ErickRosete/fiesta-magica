@@ -1,22 +1,33 @@
-.descripcion{
-    /* font-size:30px; */
-    font-size:2vw;
-    text-align: center;
-    background-color:#f08ea7;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
-    color:white;
+.descripcion {
+  /* font-size:30px; */
+  font-size: 2vw;
+  text-align: center;
+  background-color: #f08ea7;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+  color: white;
+  opacity: 1;
+  height: 0vh;
 }
-.tarjeta{
-    padding:1rem;
+.tarjeta {
+  padding: 1rem;
 }
-.imageContainer{
-    background-color:#de365a;
+.imageContainer {
+  background-color: #de365a;
 }
-.imageClass{
-    width:100%;
-    height:auto;
-    max-height:30vh;
-    cursor:pointer;
+.imageClass {
+  width: 100%;
+  height: auto;
+  max-height: 30vh;
+  cursor: pointer;
+}
 
+/* animacion en hover in y hover out */
+.card:hover .descripcion {
+  height: 7vh;
+}
+
+.descripcion {
+  height: 0vh;
+  transition: height 500ms ease-in-out;
 }

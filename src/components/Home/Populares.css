@@ -1,0 +1,21 @@
+.animation-object{
+    opacity: 0;
+}
+
+.animation-object.fade-enter {
+    opacity: 0;
+}
+
+.animation-object.fade-enter-active {
+    opacity: 1;
+    transition: opacity 400ms ease-in;
+}
+
+.animation-object.fade-enter-done {
+    opacity: 1;
+}
+.circular{
+    /* max-height:10% */
+    border-radius: 50%;
+
+}

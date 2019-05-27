@@ -26,7 +26,9 @@
     max-width: 5rem;
     height: auto;
 }
-
+.logo:hover{
+    cursor: pointer;
+}
 .top-line {
     margin-top:0;
     margin-bottom: 2.5rem;

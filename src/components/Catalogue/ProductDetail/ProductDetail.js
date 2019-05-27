@@ -3,9 +3,17 @@ import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Image from 'react-bootstrap/Image'
 import "./ProductDetail.css"
+import classNames from 'classnames';
 
 const placeholder="https://via.placeholder.com/468x60?text=Visit+Blogging.com+Now"
 
+const rowClass = classNames(
+    'adicional-container',
+    'justify-content-center'
+);
+const colClass = classNames(
+    'adicional-element-container'
+);
 export class ProductDetail extends Component {
     imageLink;
     constructor(props) {
@@ -36,11 +44,19 @@ export class ProductDetail extends Component {
                         </p>
                     </Col>
                 </Row>
-                <Row className="adicional">
-                    <p >Alto</p><p className="secSpec">10cm</p>
-                    <p>Ancho</p><p className="secSpec">20cm</p>
-                    <p>Largo</p><p className="secSpec">30cm</p>
-                </Row>
+                {this.props.height>=0&&
+                    <Row className={rowClass}>
+                        <div className={colClass}>
+                            <span className="adicional">Alto</span><span className="secSpec">  {this.props.height} cm</span>
+                        </div>
+                        <div className={colClass}>
+                            <span className="adicional">Ancho</span><span className="secSpec">  {this.props.width} cm</span>
+                        </div>
+                        <div className={colClass}>
+                            <span className="adicional">Largo</span><span className="secSpec">  {this.props.long} cm</span>
+                        </div>
+                    </Row>
+                }
             </div>
         )
     }
