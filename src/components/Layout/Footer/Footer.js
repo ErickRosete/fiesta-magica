@@ -15,7 +15,7 @@ const Footer = () => {
           </Col>
           <Col xs={12} md={6}>
             <p>Coyoacán, CDMX</p>
-            <p>Tel. 5617-9619 | 55-6611-2854</p>
+            <p>Tel. 55-9627-8073 | 55-4443-3759</p>
           </Col>
         </Row>
         <Row className="bg-purple footer-bottom">
